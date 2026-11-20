@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI trophy guide + tracker</title>
+<meta name="description" content="An offline guide and checklist for all 55 Grand Theft Auto VI trophies on PlayStation 5, with a platinum roadmap, missable flags and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="mark" aria-hidden="true">VI</span>
+    <div>
+      <h1>Leonida Trophy Atlas</h1>
+      <p class="sub">Every GTA VI trophy on PS5 — guide, checklist &amp; platinum roadmap. Unofficial fan guide, not affiliated with Rockstar Games.</p>
+    </div>
+  </div>
+  <div class="progress" aria-label="Trophy progress">
+    <div class="progress-line"><strong id="progressText">0 of 55 earned</strong><span id="progressPct">0% to Platinum</span></div>
+    <div class="bar"><span id="progressFill"></span></div>
+    <p class="grades" id="gradeCounts"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" data-view="checklist" class="tab active">Checklist</button>
+  <button type="button" data-view="roadmap" class="tab">Platinum roadmap</button>
+  <button type="button" data-view="missable" class="tab">Missable <span class="pill">1</span></button>
+</nav>
+
+<section class="controls" aria-label="Filters and tools">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+  <label>Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="online">Online</option>
+    </select>
+  </label>
+  <label>Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="toggle"><input id="spoilerToggle" type="checkbox" checked> Hide story spoilers</label>
+  <button id="exportBtn" type="button">Export progress</button>
+  <label class="import">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+  <button id="resetBtn" type="button" class="quiet">Reset</button>
+</section>
+
+<main>
+  <section id="checklistView" class="view">
+    <div class="layout">
+      <div class="list-col">
+        <p class="hint" id="resultCount"></p>
+        <ul id="trophyList" class="trophies"></ul>
+        <p class="empty" id="emptyState" hidden>No trophies match these filters. There are no online trophies in GTA VI — all 55 are offline, single-player.</p>
+      </div>
+      <aside class="detail-col" aria-label="Trophy guide">
+        <div id="detailPanel" class="detail"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="roadmapView" class="view" hidden>
+    <h2>Road to the Platinum: Vice Got a Price!</h2>
+    <p class="lede">About <strong>200 hours</strong>, all offline, all in <strong>one playthrough</strong>. Nothing is permanently missable except possibly one meditation — do that in Chapter 1 and the rest can wait until free roam. Work the stages in order; every trophy below links to its guide.</p>
+    <ol id="roadmapStages" class="stages"></ol>
+    <p class="note">Counts come from the in-game 100% checklist as published by PowerPyx and GTABase: 35 requirements, most asking for part of a set, not the whole thing. The checklist itself only appears after the story, under Progress, then Stats, then 100% Completion — but everything you do before then already counts.</p>
+  </section>
+
+  <section id="missableView" class="view" hidden>
+    <h2>Missable trophies</h2>
+    <p class="lede">Only <strong>one</strong> trophy is possibly missable. Every other trophy can be earned in free roam after the story, and the 100% checklist is fully completable after the credits.</p>
+    <div id="missableCard"></div>
+    <h3>Why the rest are safe</h3>
+    <ul class="safe">
+      <li>All 12 story trophies unlock by playing the main missions — none can be skipped.</li>
+      <li>Every side quest, robbery, collectible and activity stays open after the final mission.</li>
+      <li>The 100% checklist (A Long Road) has no missable requirement, per GTABase and PowerPyx.</li>
+      <li>One warning that is not a missable trophy: the Irredeemable criminal profile is permanent — see Actions Speak Louder before you go on a rampage.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <h2>Sources</h2>
+  <p>Every trophy's guide cites its source beside it. The full guides consulted for this atlas:</p>
+  <ul class="sources">
+    <li><a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase — GTA 6 Trophy Guide</a></li>
+    <li><a href="https://www.gtabase.com/articles/gta-6/gta-6-100-completion-guide-interactive-checklist">GTABase — GTA 6 100% Completion Guide</a></li>
+    <li><a href="https://www.powerpyx.com/gta-6-100-completion-checklist-guide/">PowerPyx — GTA 6 100% Completion Checklist</a></li>
+    <li><a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer — GTA 6 Trophy Guide &amp; Platinum Roadmap</a></li>
+    <li><a href="https://insider-gaming.com/complete-gta-6-trophy-list-how-to-get-all-trophies-achievements/">Insider Gaming — Complete GTA 6 Trophy List</a></li>
+    <li><a href="https://gtascoop.com/guides/gta-6-trophies-achievements/">GTA Scoop — GTA 6 Trophies &amp; Achievements</a></li>
+  </ul>
+  <p class="fine">Trophy names, descriptions and grades are as PlayStation publishes them. All guide text is written for this atlas, in our own words. 55 trophies: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden on PlayStation until earned. This page works fully offline — it loads nothing from the network. Not affiliated with Rockstar Games or Take-Two Interactive.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
